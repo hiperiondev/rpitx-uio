@@ -1,0 +1,91 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+  fragment@0 {
+             target-path = "/";
+             __overlay__ {
+                         /* #address-cells = <0x1>; */
+                         /* #size-cells = <0x1>; */
+                         rpitx {
+                               #address-cells = <1>;
+                               #size-cells = <0>;
+                               interrupt-controller;
+                               phandle = <0x1>;
+                               compatible = "rpitx";
+                                      Irq_manage0: irq_manage@0 {
+                                                               reg = <0>;
+                                                                _place_holder = <0x1000>;
+                                                               };
+                                        Amdmasync1: amdmasync@1 {
+                                                               reg = <1>;
+                                                               _tune_frequency = /bits/ 64 <0x1000>;
+                                                               _sample_rate = /bits/ 32 <0x00>;
+                                                               _channel = /bits/ 64 <0x1>;
+                                                               _fifo_size = /bits/ 32 <0x1000>;
+                                                               };
+                                                    Atv2: atv@2 {
+                                                               reg = <2>;
+                                                               _tune_frequency = /bits/ 64 <0x1000>;
+                                                               _sample_rate = /bits/ 32 <0x00>;
+                                                               _channel = /bits/ 64 <0x1>;
+                                                               _lines = /bits/ 32 <0x100>;
+                                                               };
+                                        Fmdmasync3: fmdmasync@3 {
+                                                               reg = <3>;
+                                                               _channel = /bits/ 64 <0x1>;
+                                                               _fifo_size = /bits/ 32 <0x1000>;
+                                                               };
+                                          Fskburst4: fskburst@4 {
+                                                               reg = <4>;
+                                                               _tune_frequency = /bits/ 64 <0x1000>;
+                                                               _channel = /bits/ 64 <0x1>;
+                                                               _fifo_size = /bits/ 32 <0x1000>;
+                                                               _symbol_rate = /bits/ 64 <0x100>;
+                                                               _deviation = /bits/ 64 <0x100>;
+                                                               _upsample = /bits/ 64 <0x100>;
+                                                               };
+                                        Iqdmasync5: iqdmasync@5 {
+                                                               reg = <5>;
+                                                               _tune_frequency = /bits/ 64 <0x1000>;
+                                                               _sample_rate = /bits/ 32 <0x00>;
+                                                               _channel = /bits/ 64 <0x1>;
+                                                               _fifo_size = /bits/ 32 <0x1000>;
+                                                               _mode = <0x1>;
+                                                               };
+                                    Ngfmdmasync6: ngfmdmasync@6 {
+                                                               reg = <6>;
+                                                               _tune_frequency = /bits/ 64 <0x1000>;
+                                                               _sample_rate = /bits/ 32 <0x00>;
+                                                               _channel = /bits/ 64 <0x1>;
+                                                               _fifo_size = /bits/ 32 <0x1000>;
+                                                               _use_pwm = <0x1>;
+                                                               };
+                                          Ookburst7: ookburst@7 {
+                                                               reg = <7>;
+                                                               _tune_frequency = /bits/ 64 <0x1000>;
+                                                               _channel = /bits/ 64 <0x1>;
+                                                               _fifo_size = /bits/ 32 <0x1000>;
+                                                               _symbol_rate = /bits/ 64 <0x100>;
+                                                               _ratio_ramp = /bits/ 64 <0x100>;
+                                                               _upsample = /bits/ 64 <0x100>;
+                                                               };
+                                   Phasedmasync8: phasedmasyn@8 {
+                                                               reg = <8>;
+                                                               _tune_frequency = /bits/ 64 <0x1000>;
+                                                               _channel = /bits/ 64 <0x1>;
+                                                               _fifo_size = /bits/ 32 <0x1000>;
+                                                               _symbol_rate = /bits/ 64 <0x100>;
+                                                               _number_of_phase = /bits/ 64 <0x1>;
+                                                               };
+                                Serialdmasync9: serialdmasync@9 {
+                                                               reg = <9>;
+                                                               _sample_rate = /bits/ 32 <0x1>;
+                                                               _channel = /bits/ 64 <0x1>;
+                                                               _fifo_size = /bits/ 32 <0x1000>;
+                                                               _dualoutput = <0x0>;
+                                                               };
+                                };
+                        };
+             };
+   };
