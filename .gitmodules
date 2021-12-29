@@ -1,3 +1,6 @@
 [submodule "librpitx-C"]
 	path = librpitx-C
 	url = git@github.com:hiperiondev/librpitx-C.git
+[submodule "udmabuf"]
+	path = udmabuf
+	url = https://github.com/ikwzm/udmabuf.git
